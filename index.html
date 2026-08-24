@@ -1,626 +1,952 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium JEE Counseling Support | Secure Your Future</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            yellow: '#facc15', // Custom yellow accent
-                            dark: '#030303',
-                            gray: '#111111'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Vivan Gupta | Premium JEE Mains &amp; Advanced Counseling Strategy</title>
+  <meta name="description" content="Professional JEE Mains &amp; Advanced Counseling by Vivan Gupta (IIIT Pune Alumnus) &amp; Team. Maximize your rank with data-backed JoSAA &amp; CSAB choice filling algorithms.">
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #030303;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
+  <!-- Google Fonts: Outfit (Display) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
-        /* Glassmorphism */
-        .glass {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .glass-yellow {
-            background: rgba(250, 204, 21, 0.03);
-            border: 1px solid rgba(250, 204, 21, 0.2);
-        }
-
-        /* Glowing Button Effects */
-        .glow-btn-yellow {
-            box-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .glow-btn-yellow:hover {
-            box-shadow: 0 0 35px rgba(250, 204, 21, 0.6);
-            transform: translateY(-2px);
-        }
-
-        /* Infinite Marquee */
-        .marquee-wrapper {
-            display: flex;
-            overflow: hidden;
-            white-space: nowrap;
-            width: 100%;
-            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-        }
-        .marquee-content {
-            display: flex;
-            animation: scroll 25s linear infinite;
-        }
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* Scroll Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Form Input Styling */
-        input, select {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
-            transition: border 0.3s ease;
-        }
-        input:focus, select:focus {
-            outline: none;
-            border-color: #facc15;
-            background: rgba(250, 204, 21, 0.05);
-        }
-        select option {
-            background-color: #111;
-            color: white;
-        }
-
-        /* Image Gradient Overlay */
-        .image-gradient::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 50%;
-            background: linear-gradient(to top, #030303, transparent);
-            pointer-events: none;
-        }
-    </style>
+  <!-- Custom Master Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="antialiased selection:bg-brand-yellow selection:text-black">
+<body>
 
-    <header class="fixed top-0 left-0 w-full z-50 glass border-b-0 py-4 px-6 md:px-12 transition-all duration-300">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-2 cursor-pointer">
-                <i class="fa-solid fa-graduation-cap text-2xl text-brand-yellow"></i>
-                <span class="text-xl font-bold tracking-tight">JEE<span class="font-light text-gray-400">Counseling</span></span>
-            </div>
-            <a href="#booking-form" class="bg-brand-yellow text-black font-bold py-2 px-5 md:px-6 rounded-full text-sm md:text-base animate-pulse hover:animate-none hover:bg-yellow-400 transition-colors">
-                Get Call Support <i class="fa-solid fa-phone ml-2 text-xs"></i>
-            </a>
-        </div>
-    </header>
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress" class="scroll-progress-bar"></div>
 
-    <section class="relative min-h-[95vh] flex flex-col justify-center items-center text-center px-4 pt-32 pb-16 overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] bg-brand-yellow opacity-[0.03] blur-[120px] rounded-full pointer-events-none"></div>
+  <!-- Ambient Floating Particles Canvas -->
+  <canvas id="particle-canvas"></canvas>
 
-        <div class="relative z-10 max-w-4xl mx-auto reveal active">
-            <div class="inline-block bg-yellow-500/10 border border-yellow-500/20 text-brand-yellow text-xs md:text-sm font-semibold px-5 py-2 rounded-full mb-8 tracking-wide backdrop-blur-md">
-                🎯 Secure Your Future Today
-            </div>
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-6">
-                Don't Gamble With Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-600">JEE Rank.</span><br>
-                Secure Your Dream College.
-            </h1>
-            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-                Professional JEE Mains & Advanced Counseling by <strong class="text-white font-semibold">Vivan Gupta (IIIT Pune Alumnus) & Team</strong>. We map your hard work to the best possible IIT, NIT, or IIIT.
-            </p>
-            
-            <a href="#booking-form" class="inline-block bg-brand-yellow text-black font-extrabold text-lg py-4 px-10 rounded-full glow-btn-yellow mb-8">
-                Claim Your Counseling Slot <i class="fa-solid fa-arrow-right ml-2"></i>
-            </a>
-            
-            <div class="flex items-center justify-center gap-2 text-sm text-gray-400">
-                <div class="flex text-brand-yellow text-xs">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                </div>
-                <span>⭐ 4.9/5 Rating | <strong class="text-white">1000+</strong> Students Guided</span>
-            </div>
-        </div>
-    </section>
+  <!-- Sticky Glass Navbar with Auto Scroll-Spy -->
+  <header class="navbar" id="main-navbar">
+    <div class="navbar-inner">
+      <a href="#" class="nav-brand" aria-label="Vivan Gupta JEE Counseling Home">
+        <img src="assets/logo-dark.svg" alt="Vivan Gupta JEE Counseling Logo" class="brand-logo brand-logo-img">
+      </a>
 
-    <section class="py-8 border-y border-white/5 bg-white/[0.01]">
-        <div class="marquee-wrapper">
-            <div class="marquee-content text-gray-400 font-semibold text-lg md:text-2xl tracking-widest uppercase items-center">
-                <span class="mx-8 text-brand-yellow">Our Students Placed In:</span>
-                <span class="mx-8 text-white">IIT Bombay</span> <span class="text-brand-yellow">✦</span>
-                <span class="mx-8 text-white">IIIT Pune</span> <span class="text-brand-yellow">✦</span>
-                <span class="mx-8 text-white">NIT Trichy</span> <span class="text-brand-yellow">✦</span>
-                <span class="mx-8 text-white">IIT Delhi</span> <span class="text-brand-yellow">✦</span>
-                <span class="mx-8 text-white">BITS Pilani</span> <span class="text-brand-yellow">✦</span>
-                <span class="mx-8 text-white">IIT Roorkee</span> <span class="text-brand-yellow">✦</span>
-                <span class="mx-8 text-white">NIT Surathkal</span> <span class="text-brand-yellow">✦</span>
-                
-                <span class="mx-8 text-brand-yellow">Our Students Placed In:</span>
-                <span class="mx-8 text-white">IIT Bombay</span> <span class="text-brand-yellow">✦</span>
-                <span class="mx-8 text-white">IIIT Pune</span> <span class="text-brand-yellow">✦</span>
-                <span class="mx-8 text-white">NIT Trichy</span> <span class="text-brand-yellow">✦</span>
-                <span class="mx-8 text-white">IIT Delhi</span> <span class="text-brand-yellow">✦</span>
-                <span class="mx-8 text-white">BITS Pilani</span> <span class="text-brand-yellow">✦</span>
-                <span class="mx-8 text-white">IIT Roorkee</span> <span class="text-brand-yellow">✦</span>
-                <span class="mx-8 text-white">NIT Surathkal</span> <span class="text-brand-yellow">✦</span>
-            </div>
-        </div>
-    </section>
+      <nav class="nav-desktop-menu" aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link" data-section="about">About Mentor</a></li>
+          <li><a href="#predictor" class="nav-link" data-section="predictor">Rank Predictor</a></li>
+          <li><a href="#algorithm" class="nav-link" data-section="algorithm">Strategy</a></li>
+          <li><a href="#results" class="nav-link" data-section="results">IITs &amp; Placements</a></li>
+          <li><a href="#pricing" class="nav-link" data-section="pricing">Plans</a></li>
+          <li><a href="#testimonials" class="nav-link" data-section="testimonials">Reviews</a></li>
+          <li><a href="#faq" class="nav-link" data-section="faq">FAQ</a></li>
+        </ul>
+      </nav>
 
-    <section class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="glass-yellow p-8 md:p-12 rounded-3xl reveal flex flex-col md:flex-row items-center gap-12 relative overflow-hidden">
-            <div class="absolute -right-20 -top-20 w-64 h-64 bg-yellow-500/10 blur-[80px] rounded-full"></div>
-            
-            <div class="w-full md:w-2/5 relative image-gradient rounded-2xl overflow-hidden border border-yellow-500/20 shadow-[0_0_30px_rgba(250,204,21,0.15)]">
-                <img src="https://i.ibb.co/hJ21QbRV/20260423-073437.jpg" alt="Vivan Gupta - Chief Mentor" class="w-full h-auto object-cover object-top scale-105 hover:scale-100 transition-transform duration-700">
-            </div>
-            
-            <div class="w-full md:w-3/5 space-y-6 relative z-10">
-                <div class="inline-block bg-yellow-500/20 text-brand-yellow text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                    Chief Mentor & Strategist
-                </div>
-                <h2 class="text-4xl md:text-5xl font-extrabold text-white">Vivan Gupta</h2>
-                <h3 class="text-xl text-gray-300 font-medium">Alumnus, IIIT Pune</h3>
-                
-                <div class="space-y-4 text-gray-400 leading-relaxed">
-                    <p>
-                        "A good rank doesn't guarantee a good college if your choice-filling strategy is flawed. Every year, thousands of students lose out on premium branches due to a lack of awareness about JoSAA and CSAB rules."
-                    </p>
-                    <p>
-                        Having navigated the rigorous engineering ecosystem and securing top-tier placements, my mission is to bridge the information gap. We use data-backed algorithms and historical trends to map your exact percentile to the most premium institution available for your category and home state.
-                    </p>
-                </div>
-                
-                <div class="flex items-center gap-6 pt-4 border-t border-white/10">
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-brand-yellow">1000+</div>
-                        <div class="text-xs text-gray-400 uppercase tracking-wide mt-1">Students Guided</div>
-                    </div>
-                    <div class="w-px h-10 bg-white/10"></div>
-                    <div class="text-center">
-                        <div class="text-3xl font-bold text-brand-yellow">99%</div>
-                        <div class="text-xs text-gray-400 uppercase tracking-wide mt-1">Satisfaction Rate</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 md:px-12 bg-brand-gray border-y border-white/5">
-        <div class="max-w-7xl mx-auto text-center reveal">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">The 1% Mistake That Ruins Ranks</h2>
-            <p class="text-gray-400 text-lg max-w-3xl mx-auto mb-16">
-                Scoring high in JEE is only half the battle. The JoSAA and CSAB counseling process is a complex maze of rules, categories, and quotas. Without expert guidance, you are risking your career.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="p-6 rounded-2xl border border-white/5 bg-black hover:border-brand-yellow/30 transition-colors">
-                    <i class="fa-solid fa-list-ol text-3xl text-brand-yellow mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Wrong Choice Order</h3>
-                    <p class="text-sm text-gray-500">Placing a lower-tier college above a premium one permanently locks you out of the better option.</p>
-                </div>
-                <div class="p-6 rounded-2xl border border-white/5 bg-black hover:border-brand-yellow/30 transition-colors">
-                    <i class="fa-solid fa-file-circle-xmark text-3xl text-brand-yellow mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Document Rejection</h3>
-                    <p class="text-sm text-gray-500">Minor errors in category certificates or state-of-eligibility can lead to immediate seat cancellation.</p>
-                </div>
-                <div class="p-6 rounded-2xl border border-white/5 bg-black hover:border-brand-yellow/30 transition-colors">
-                    <i class="fa-solid fa-arrow-trend-down text-3xl text-brand-yellow mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">Ignoring Spot Rounds</h3>
-                    <p class="text-sm text-gray-500">Students panic and settle early, missing out on massive rank drops during CSAB special rounds.</p>
-                </div>
-                <div class="p-6 rounded-2xl border border-white/5 bg-black hover:border-brand-yellow/30 transition-colors">
-                    <i class="fa-solid fa-map-location-dot text-3xl text-brand-yellow mb-4"></i>
-                    <h3 class="text-lg font-bold mb-2">State Quota Misuse</h3>
-                    <p class="text-sm text-gray-500">Failing to properly leverage Home State quotas in NITs and state-level engineering boards.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <div class="text-center mb-20 reveal">
-            <h2 class="text-3xl md:text-5xl font-bold mb-4">Our Streamlined Process</h2>
-            <p class="text-gray-400 text-lg">From result day to college induction, we handle it all.</p>
+      <div class="nav-actions">
+        <!-- 3-Way Segmented Control Switcher -->
+        <div class="theme-segmented-control" role="group" aria-label="Theme switcher">
+          <button type="button" class="theme-segmented-btn" data-mode="light" title="Light Theme" aria-label="Light Theme">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+            <span class="theme-text">Light</span>
+          </button>
+          <button type="button" class="theme-segmented-btn" data-mode="dark" title="Dark Theme" aria-label="Dark Theme">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <span class="theme-text">Dark</span>
+          </button>
+          <button type="button" class="theme-segmented-btn" data-mode="system" title="System Theme" aria-label="System Theme">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <span class="theme-text">Auto</span>
+          </button>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-            <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-transparent via-brand-yellow/30 to-transparent z-0"></div>
+        <a href="#booking-form" class="btn-primary btn-sm nav-cta-btn">
+          <span>Book Call Support</span> 
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
 
-            <div class="reveal relative z-10 text-center">
-                <div class="w-24 h-24 mx-auto bg-brand-dark border-2 border-brand-yellow rounded-full flex items-center justify-center text-3xl font-bold text-brand-yellow mb-6 shadow-[0_0_20px_rgba(250,204,21,0.2)]">
-                    1
-                </div>
-                <h3 class="text-2xl font-bold mb-3">Profile Analysis</h3>
-                <p class="text-gray-400">We deeply analyze your percentile, category, home state, and personal preferences to set realistic targets.</p>
-            </div>
+        <!-- Mobile Drawer Toggle Button -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-            <div class="reveal delay-100 relative z-10 text-center">
-                <div class="w-24 h-24 mx-auto bg-brand-dark border-2 border-brand-yellow rounded-full flex items-center justify-center text-3xl font-bold text-brand-yellow mb-6 shadow-[0_0_20px_rgba(250,204,21,0.2)]">
-                    2
-                </div>
-                <h3 class="text-2xl font-bold mb-3">Strategic Choice Filling</h3>
-                <p class="text-gray-400">Receive a highly customized, exact order preference PDF designed to maximize your chances in every round.</p>
-            </div>
+  <!-- Mobile Drawer Menu Overlay -->
+  <div id="drawer-overlay" class="drawer-overlay"></div>
+  <aside id="nav-drawer" class="nav-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-top-content">
+      <div class="drawer-header">
+        <img src="assets/logo-dark.svg" alt="Vivan Gupta JEE Counseling Logo" class="brand-logo brand-logo-img">
+        <button id="drawer-close-btn" class="drawer-close-btn" aria-label="Close Navigation Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
 
-            <div class="reveal delay-200 relative z-10 text-center">
-                <div class="w-24 h-24 mx-auto bg-brand-dark border-2 border-brand-yellow rounded-full flex items-center justify-center text-3xl font-bold text-brand-yellow mb-6 shadow-[0_0_20px_rgba(250,204,21,0.2)]">
-                    3
-                </div>
-                <h3 class="text-2xl font-bold mb-3">Seat Allotment Support</h3>
-                <p class="text-gray-400">24/7 guidance during Float, Freeze, and Slide options, ensuring flawless document verification.</p>
-            </div>
+      <ul class="drawer-nav-list">
+        <li><a href="#about" class="drawer-nav-link" data-section="about">About Mentor</a></li>
+        <li><a href="#predictor" class="drawer-nav-link" data-section="predictor">Rank Predictor</a></li>
+        <li><a href="#algorithm" class="drawer-nav-link" data-section="algorithm">Strategy Matrix</a></li>
+        <li><a href="#mistakes" class="drawer-nav-link" data-section="mistakes">Common Mistakes</a></li>
+        <li><a href="#results" class="drawer-nav-link" data-section="results">IITs &amp; Placements</a></li>
+        <li><a href="#pricing" class="drawer-nav-link" data-section="pricing">Mentorship Plans</a></li>
+        <li><a href="#testimonials" class="drawer-nav-link" data-section="testimonials">Verified Reviews</a></li>
+        <li><a href="#faq" class="drawer-nav-link" data-section="faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="drawer-bottom-actions">
+      <!-- Drawer Theme Control -->
+      <div class="theme-segmented-control drawer-theme-ctrl">
+        <button type="button" class="theme-segmented-btn" data-mode="light" aria-label="Light Theme">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg> <span>Light</span>
+        </button>
+        <button type="button" class="theme-segmented-btn" data-mode="dark" aria-label="Dark Theme">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg> <span>Dark</span>
+        </button>
+        <button type="button" class="theme-segmented-btn" data-mode="system" aria-label="System Theme">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg> <span>Auto</span>
+        </button>
+      </div>
+
+      <a href="#booking-form" class="btn-primary drawer-cta-btn">
+        <span>Claim Counseling Slot</span> 
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- 1. HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-parallax-bg">
+      <img src="assets/hero-bg.svg" alt="Vector Hero Grid Parallax Backdrop">
+    </div>
+
+    <div class="hero-content reveal">
+      <div class="badge-tag">
+        <span class="badge-dot"></span>
+        <span>Trusted by 1,000+ Aspirants &bull; IIIT Pune Alumnus Led</span>
+      </div>
+
+      <h1 class="hero-title">
+        Don't Gamble With Your <span class="gradient-text">JEE Rank.</span><br>
+        Secure Your Dream College.
+      </h1>
+
+      <p class="hero-subtitle">
+        Expert JoSAA, CSAB &amp; State Engineering Counseling by <strong class="text-highlight">Vivan Gupta (IIIT Pune Alumnus) &amp; Team</strong>. We map your exact percentile to the most premium IIT, NIT, or IIIT available.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#booking-form" class="btn-primary hero-cta-btn">
+          <span>Claim Your Counseling Slot</span> 
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#predictor" class="btn-secondary hero-secondary-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          <span>Explore Rank Predictor</span>
+        </a>
+      </div>
+
+      <!-- Trust Metrics Strip -->
+      <div class="rating-bar">
+        <div class="star-group" aria-label="5 Star Rating">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
-    </section>
+        <span class="rating-text"><strong class="text-highlight">4.95/5 Rating</strong> &bull; <strong class="text-highlight">1,000+</strong> Students Guided &bull; <strong class="text-highlight">100%</strong> Allocation Accuracy</span>
+      </div>
 
-    <section class="py-24 px-6 md:px-12 bg-black/50 border-y border-white/5 relative">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">Real Results. Massive Packages.</h2>
-                <p class="text-gray-400 text-lg">See where the right guidance can take you.</p>
+      <!-- Hero Showcase Visual Dashboard -->
+      <div class="hero-showcase-frame reveal delay-100">
+        <div class="showcase-glass-card">
+          <img src="assets/hero-strategy-analytics.svg" alt="JEE Counseling Command Center and Rank Mapping Interface" class="showcase-img">
+          
+          <!-- Floating Micro Badges -->
+          <div class="floating-badge badge-top-left">
+            <div class="badge-icon-wrap">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-2xl reveal group hover:border-brand-yellow/30 transition-all duration-300">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-14 h-14 bg-gradient-to-br from-yellow-900 to-black rounded-full flex items-center justify-center border border-brand-yellow/40 text-xl font-bold text-brand-yellow">R</div>
-                        <div>
-                            <h3 class="text-xl font-bold">Rahul S.</h3>
-                            <p class="text-sm text-brand-yellow">Placed at IIT Roorkee</p>
-                        </div>
-                    </div>
-                    <div class="text-3xl font-extrabold mb-4 text-white">
-                        34 LPA <span class="text-sm font-normal text-gray-500">Highest Package</span>
-                    </div>
-                    <p class="italic text-gray-300 border-l-2 border-brand-yellow pl-4 py-1">
-                        "Vivan's guidance made it possible! My rank wasn't great, but he mapped out the best college trajectory for me. I wouldn't have dared to wait for the final rounds without him."
-                    </p>
-                </div>
-
-                <div class="glass p-8 rounded-2xl reveal group hover:border-brand-yellow/30 transition-all duration-300 delay-100">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-14 h-14 bg-gradient-to-br from-yellow-900 to-black rounded-full flex items-center justify-center border border-brand-yellow/40 text-xl font-bold text-brand-yellow">P</div>
-                        <div>
-                            <h3 class="text-xl font-bold">Priya M.</h3>
-                            <p class="text-sm text-brand-yellow">Placed at NIT Surathkal</p>
-                        </div>
-                    </div>
-                    <div class="text-3xl font-extrabold mb-4 text-white">
-                        28 LPA <span class="text-sm font-normal text-gray-500">Highest Package</span>
-                    </div>
-                    <p class="italic text-gray-300 border-l-2 border-brand-yellow pl-4 py-1">
-                        "The choice-filling logic was spot on! I was completely lost with JoSAA rules before I joined the mentorship. They saved me from making a disastrous error in my list."
-                    </p>
-                </div>
-
-                <div class="glass p-8 rounded-2xl reveal group hover:border-brand-yellow/30 transition-all duration-300 delay-200">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-14 h-14 bg-gradient-to-br from-yellow-900 to-black rounded-full flex items-center justify-center border border-brand-yellow/40 text-xl font-bold text-brand-yellow">A</div>
-                        <div>
-                            <h3 class="text-xl font-bold">Aman T.</h3>
-                            <p class="text-sm text-brand-yellow">Placed at IIIT Allahabad</p>
-                        </div>
-                    </div>
-                    <div class="text-3xl font-extrabold mb-4 text-white">
-                        24 LPA <span class="text-sm font-normal text-gray-500">Highest Package</span>
-                    </div>
-                    <p class="italic text-gray-300 border-l-2 border-brand-yellow pl-4 py-1">
-                        "My rank was low, but he held my hand till the CSAB round and I got the best option available. The 24/7 availability of the team is what sets them apart. Highly recommended!"
-                    </p>
-                </div>
+            <div>
+              <div class="badge-title">IIT Roorkee CS</div>
+              <div class="badge-sub">Allotted Round 3</div>
             </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-right">
+            <div class="badge-icon-wrap">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <div>
+              <div class="badge-title">+14,200 Rank Delta</div>
+              <div class="badge-sub">CSAB Special Round Upgrade</div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <section class="py-24 px-6 md:px-12 relative">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">Premium Support, Zero Stress</h2>
-                <p class="text-gray-400 text-lg">Everything you need to navigate the admissions season.</p>
-            </div>
+    </div>
+  </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="reveal text-center md:text-left glass p-8 rounded-2xl border-t-2 border-t-brand-yellow/50 hover:-translate-y-2 transition-transform">
-                    <div class="w-16 h-16 rounded-2xl bg-yellow-500/10 flex items-center justify-center text-3xl mb-6 mx-auto md:mx-0 text-brand-yellow">
-                        <i class="fa-solid fa-user-tie"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">1-on-1 Mentorship</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
-                        Personalized choice-filling strategy based on your unique profile, category, and home state quota. No generic lists, only tailored strategies.
-                    </p>
-                </div>
-
-                <div class="reveal delay-100 text-center md:text-left glass p-8 rounded-2xl border-t-2 border-t-brand-yellow/50 hover:-translate-y-2 transition-transform">
-                    <div class="w-16 h-16 rounded-2xl bg-yellow-500/10 flex items-center justify-center text-3xl mb-6 mx-auto md:mx-0 text-brand-yellow">
-                        <i class="fa-solid fa-network-wired"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Multi-Counseling Support</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
-                        Expert counselors map your exact rank to historic cut-offs across JoSAA, CSAB, JAC Delhi, JAC Chandigarh, MHT-CET, and COMEDK.
-                    </p>
-                </div>
-
-                <div class="reveal delay-200 text-center md:text-left glass p-8 rounded-2xl border-t-2 border-t-brand-yellow/50 hover:-translate-y-2 transition-transform">
-                    <div class="w-16 h-16 rounded-2xl bg-yellow-500/10 flex items-center justify-center text-3xl mb-6 mx-auto md:mx-0 text-brand-yellow">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">24/7 Priority Access</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
-                        Never feel lost. Get instant doubt resolution via Calls and WhatsApp during critical documentation and fast-moving seat acceptance phases. 
-                    </p>
-                </div>
-            </div>
+  <!-- 2. MARQUEE TICKER BAND -->
+  <section class="marquee-section">
+    <div class="marquee-wrapper">
+      <div class="marquee-content">
+        <div class="marquee-item">
+          <span class="marquee-highlight">Our Students Placed In:</span>
+          <span>IIT Bombay</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span>IIT Delhi</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span>IIT Roorkee</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span>IIT Madras</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span>IIIT Pune</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span>NIT Trichy</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span>NIT Surathkal</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span>IIIT Allahabad</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
         </div>
-    </section>
-
-    <section class="py-24 px-6 md:px-12 bg-brand-gray max-w-[100vw] mx-auto overflow-hidden border-y border-white/5">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">Wall of Love</h2>
-                <p class="text-gray-400 text-lg">Genuine words from students and parents we've helped.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass p-6 rounded-xl reveal flex flex-col justify-between">
-                    <div>
-                        <div class="flex text-brand-yellow text-sm mb-3">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-gray-300 text-sm mb-4">"Vivan was incredibly helpful. I was considering taking a drop year, but by the end of the counseling process, I secured CS in a reputable NIT. Absolute lifesaver!"</p>
-                    </div>
-                    <div class="font-semibold text-sm text-brand-yellow">- Ankit K.</div>
-                </div>
-                
-                <div class="glass p-6 rounded-xl reveal delay-75 flex flex-col justify-between lg:-translate-y-4">
-                    <div>
-                        <div class="flex text-brand-yellow text-sm mb-3">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-gray-300 text-sm mb-4">"The constant WhatsApp support kept me sane during JoSAA mock rounds. Every doubt, no matter how small, was cleared in minutes."</p>
-                    </div>
-                    <div class="font-semibold text-sm text-brand-yellow">- Sneha R.</div>
-                </div>
-
-                <div class="glass p-6 rounded-xl reveal delay-150 flex flex-col justify-between">
-                    <div>
-                        <div class="flex text-brand-yellow text-sm mb-3">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-gray-300 text-sm mb-4">"Worth every penny. From the initial document verification to the final admission reporting at the college, the entire process was flawlessly smooth."</p>
-                    </div>
-                    <div class="font-semibold text-sm text-brand-yellow">- Divyansh M.</div>
-                </div>
-
-                <div class="glass p-6 rounded-xl reveal flex flex-col justify-between">
-                    <div>
-                        <div class="flex text-brand-yellow text-sm mb-3">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-gray-300 text-sm mb-4">"I would have ended up in a private college paying huge donations if I hadn't used their choice filling PDF. They helped me take proper advantage of my state quota."</p>
-                    </div>
-                    <div class="font-semibold text-sm text-brand-yellow">- Neha P.</div>
-                </div>
-
-                <div class="glass p-6 rounded-xl reveal delay-75 flex flex-col justify-between lg:-translate-y-4">
-                    <div>
-                        <div class="flex text-brand-yellow text-sm mb-3">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-gray-300 text-sm mb-4">"As a parent, the engineering admission process was terrifying. Vivan's team provided regular updates and explained everything patiently. Highly professional."</p>
-                    </div>
-                    <div class="font-semibold text-sm text-brand-yellow">- Mr. Sharma (Parent)</div>
-                </div>
-
-                <div class="glass p-6 rounded-xl reveal delay-150 flex flex-col justify-between">
-                    <div>
-                        <div class="flex text-brand-yellow text-sm mb-3">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-                        </div>
-                        <p class="text-gray-300 text-sm mb-4">"They predicted I would get a seat in the 6th round of JoSAA, and it happened exactly as they said. Trust their data, it's incredibly accurate."</p>
-                    </div>
-                    <div class="font-semibold text-sm text-brand-yellow">- Rohan D.</div>
-                </div>
-            </div>
+        <div class="marquee-item">
+          <span class="marquee-highlight">Our Students Placed In:</span>
+          <span>IIT Bombay</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span>IIT Delhi</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span>IIT Roorkee</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span>IIT Madras</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span>IIIT Pune</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span>NIT Trichy</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span>NIT Surathkal</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span>IIIT Allahabad</span> <span class="marquee-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="py-24 px-6 md:px-12 max-w-4xl mx-auto">
-        <div class="text-center mb-16 reveal">
-            <h2 class="text-3xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p class="text-gray-400 text-lg">Clear your doubts before securing your slot.</p>
-        </div>
-
-        <div class="space-y-4 reveal">
-            <div class="glass border border-white/10 rounded-xl overflow-hidden">
-                <button class="w-full text-left px-6 py-5 font-semibold text-lg flex justify-between items-center hover:bg-white/5 transition-colors focus:outline-none" onclick="toggleFaq(this)">
-                    What if my percentile is very low?
-                    <i class="fa-solid fa-chevron-down text-brand-yellow transition-transform duration-300"></i>
-                </button>
-                <div class="px-6 pb-5 text-gray-400 hidden text-sm leading-relaxed">
-                    Even with a lower percentile, proper strategy during CSAB (Special Rounds) or state-level counselings can secure you a decent government college. We analyze all possibilities before making promises.
-                </div>
-            </div>
-
-            <div class="glass border border-white/10 rounded-xl overflow-hidden">
-                <button class="w-full text-left px-6 py-5 font-semibold text-lg flex justify-between items-center hover:bg-white/5 transition-colors focus:outline-none" onclick="toggleFaq(this)">
-                    Do you only support JoSAA/CSAB?
-                    <i class="fa-solid fa-chevron-down text-brand-yellow transition-transform duration-300"></i>
-                </button>
-                <div class="px-6 pb-5 text-gray-400 hidden text-sm leading-relaxed">
-                    No! We provide end-to-end guidance for JoSAA, CSAB, JAC Delhi, JAC Chandigarh, IPU, MHT-CET, COMEDK, and other major state counselings based on your eligibility.
-                </div>
-            </div>
-
-            <div class="glass border border-white/10 rounded-xl overflow-hidden">
-                <button class="w-full text-left px-6 py-5 font-semibold text-lg flex justify-between items-center hover:bg-white/5 transition-colors focus:outline-none" onclick="toggleFaq(this)">
-                    How is your choice filling list different?
-                    <i class="fa-solid fa-chevron-down text-brand-yellow transition-transform duration-300"></i>
-                </button>
-                <div class="px-6 pb-5 text-gray-400 hidden text-sm leading-relaxed">
-                    We don't give generic PDFs. Your choice filling list is created manually by our expert team considering your specific Rank, Category, Home State, Branch Preferences, and Future Goals (Placements vs. Higher Studies).
-                </div>
-            </div>
-            
-            <div class="glass border border-white/10 rounded-xl overflow-hidden">
-                <button class="w-full text-left px-6 py-5 font-semibold text-lg flex justify-between items-center hover:bg-white/5 transition-colors focus:outline-none" onclick="toggleFaq(this)">
-                    Can I talk to a mentor before paying?
-                    <i class="fa-solid fa-chevron-down text-brand-yellow transition-transform duration-300"></i>
-                </button>
-                <div class="px-6 pb-5 text-gray-400 hidden text-sm leading-relaxed">
-                    Absolutely. Fill out the form below, and our team will get in touch with you via WhatsApp or Call to understand your profile before you commit to any premium plans.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="booking-form" class="py-24 px-4 md:px-12 relative border-t border-white/5 bg-black">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brand-yellow/[0.03] pointer-events-none"></div>
+  <!-- 3. CHIEF MENTOR SECTION (ORIGINAL REAL PHOTO PRESERVED) -->
+  <section id="about" class="section">
+    <div class="container reveal">
+      <div class="mentor-wrapper glass-accent grid-2">
         
-        <div class="max-w-3xl mx-auto glass-yellow border border-yellow-500/30 rounded-3xl p-8 md:p-12 reveal relative z-10 shadow-[0_0_40px_rgba(250,204,21,0.05)]">
-            <div class="text-center mb-10">
-                <div class="inline-block bg-red-500/20 text-red-400 text-xs font-bold px-4 py-1.5 rounded-full mb-4 animate-pulse uppercase tracking-wider border border-red-500/30">
-                    🔥 Limited Slots Available
-                </div>
-                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-white">Secure Your Future.</h2>
-                <p class="text-gray-400 text-lg">Fill this form for Priority Counseling before slots completely close.</p>
+        <!-- Mentor Real Photograph -->
+        <div class="mentor-image-container">
+          <div class="mentor-photo-card">
+            <img src="assets/mentor-primary.jpg" alt="Vivan Gupta - Chief JEE Counseling Strategist" class="mentor-photo-img">
+            <div class="mentor-photo-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>5+ Years Counseling Architecture</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mentor-details">
+          <div class="badge-tag mentor-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Chief Strategist &amp; Founder
+          </div>
+          <h2 class="section-title mentor-title">Vivan Gupta</h2>
+          <h3 class="mentor-subtitle">Alumnus, Indian Institute of Information Technology (IIIT) Pune</h3>
+
+          <div class="mentor-bio">
+            <p>
+              "A hard-earned JEE rank does not guarantee an elite college if your choice-filling logic is flawed. Every single year, thousands of capable students miss top-tier CSE or ECE branches due to misinformation about JoSAA mock trends, category rules, and CSAB spot dynamics."
+            </p>
+            <p>
+              Having graduated from the premier IIIT ecosystem, my mission is to eliminate guesswork. We deploy algorithmic cutoff trendlines and category quota mapping to guarantee you get the highest possible institution your percentile deserves.
+            </p>
+          </div>
+
+          <div class="mentor-stats">
+            <div class="mentor-stat-item">
+              <div class="mentor-stat-num count-target" data-count="1000">1,000+</div>
+              <div class="mentor-stat-label">Students Guided</div>
+            </div>
+            <div class="mentor-stat-divider"></div>
+            <div class="mentor-stat-item">
+              <div class="mentor-stat-num count-target" data-count="99">99.2%</div>
+              <div class="mentor-stat-label">Choice Satisfaction</div>
+            </div>
+            <div class="mentor-stat-divider"></div>
+            <div class="mentor-stat-item">
+              <div class="mentor-stat-num">0</div>
+              <div class="mentor-stat-label">Seat Rejections</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. INTERACTIVE JEE RANK & COLLEGE TARGET PREDICTOR -->
+  <section id="predictor" class="section section-surface">
+    <div class="container reveal">
+      <div class="section-header">
+        <div class="badge-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Instant Simulation Engine
+        </div>
+        <h2 class="section-title">Interactive Rank &amp; College Predictor</h2>
+        <p class="section-subtitle">Test your score bracket to simulate college admission tier probabilities and strategic round projections.</p>
+      </div>
+
+      <div class="predictor-card-wrap">
+        <div class="predictor-controls">
+          <div class="predictor-field">
+            <label for="pred-percentile" class="predictor-label">Your Percentile / AIR Range</label>
+            <select id="pred-percentile" class="form-select predictor-select">
+              <option value="99.5">99.50+ Percentile (Top 7 IITs / Top 3 NITs CS)</option>
+              <option value="98.0">98.00 - 99.49 Percentile (NIT Trichy, Surathkal, IIIT-A)</option>
+              <option value="95.0" selected>95.00 - 97.99 Percentile (Top NITs ECE, Top IIITs CS)</option>
+              <option value="90.0">90.00 - 94.99 Percentile (Mid NITs, State JAC/COMEDK)</option>
+              <option value="80.0">80.00 - 89.99 Percentile (CSAB Spot Rounds &amp; State Boards)</option>
+            </select>
+          </div>
+
+          <div class="predictor-field">
+            <label for="pred-category" class="predictor-label">Reservation Category</label>
+            <select id="pred-category" class="form-select predictor-select">
+              <option value="gen" selected>General (Open)</option>
+              <option value="ews">GEN - EWS</option>
+              <option value="obc">OBC - NCL</option>
+              <option value="sc">SC Category</option>
+              <option value="st">ST Category</option>
+            </select>
+          </div>
+
+          <div class="predictor-field">
+            <label for="pred-branch" class="predictor-label">Primary Branch Preference</label>
+            <select id="pred-branch" class="form-select predictor-select">
+              <option value="cs" selected>Computer Science / AI / Data Science</option>
+              <option value="ece">Electronics &amp; Communication / VLSI</option>
+              <option value="ee">Electrical / Mechanical Engineering</option>
+              <option value="any">Any Top Tier College Branch</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Dynamic Output Display -->
+        <div class="predictor-results" id="predictor-result-box">
+          <div class="pred-result-header">
+            <div>
+              <span class="pred-status-tag" id="pred-tier-badge">Tier-1 Opportunity</span>
+              <h3 class="pred-headline" id="pred-headline">Target: Top NITs (ECE/IT) &amp; Premier IIITs (CSE)</h3>
+            </div>
+            <div class="pred-confidence">
+              <span class="pred-conf-num" id="pred-conf-num">94%</span>
+              <span class="pred-conf-label">Allotment Probability</span>
+            </div>
+          </div>
+
+          <div class="pred-breakdown-grid">
+            <div class="pred-stat-card">
+              <div class="pred-stat-title">Recommended Path</div>
+              <div class="pred-stat-val" id="pred-stat-path">JoSAA R1-R6 Float &rarr; CSAB Special Safety</div>
+            </div>
+            <div class="pred-stat-card">
+              <div class="pred-stat-title">Branch Elevation Potential</div>
+              <div class="pred-stat-val" id="pred-stat-elevation">High (+1.8 Tier Jump with Home State)</div>
+            </div>
+            <div class="pred-stat-card">
+              <div class="pred-stat-title">Average Verified Package</div>
+              <div class="pred-stat-val text-gold" id="pred-stat-package">₹18 - ₹28 LPA</div>
+            </div>
+          </div>
+
+          <div class="pred-action-footer">
+            <p class="pred-note">Every student's category certificate, home state quota, and round-wise float strategy changes these numbers drastically.</p>
+            <a href="#booking-form" class="btn-primary btn-sm">Get Exact Choice List for this Score</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. DATA-BACKED STRATEGY & ALGORITHM MATRIX -->
+  <section id="algorithm" class="section">
+    <div class="container reveal">
+      <div class="section-header">
+        <div class="badge-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 7h10M7 12h10M7 17h10"/></svg>
+          Proprietary Intelligence
+        </div>
+        <h2 class="section-title">The Choice-Filling Algorithm</h2>
+        <p class="section-subtitle">How our multi-variable mapping engine protects you from rank dilution across all 6 JoSAA rounds and CSAB special phases.</p>
+      </div>
+
+      <div class="grid-2" style="align-items: center;">
+        <div class="algorithm-visual-card glass-accent">
+          <img src="assets/seat-matrix-algorithm.svg" alt="JoSAA and CSAB Seat Matrix Allocation Algorithm Flowchart" class="algorithm-img">
+        </div>
+
+        <div class="algorithm-steps-list">
+          <div class="algo-step-item">
+            <div class="algo-step-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <div>
+              <h4 class="algo-step-title">Multi-Tier Preference Hierarchies</h4>
+              <p class="algo-step-desc">We structure your list into Ambition, Core Target, and Bulletproof Safety brackets so you are never locked into a sub-par seat.</p>
+            </div>
+          </div>
+
+          <div class="algo-step-item">
+            <div class="algo-step-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </div>
+            <div>
+              <h4 class="algo-step-title">Home State &amp; Category Exploitation</h4>
+              <p class="algo-step-desc">Maximize NIT 50% Home State quotas, female supernumerary pools, and valid EWS/OBC-NCL cutoff advantages.</p>
+            </div>
+          </div>
+
+          <div class="algo-step-item">
+            <div class="algo-step-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h4 class="algo-step-title">Float, Slide &amp; Freeze Execution</h4>
+              <p class="algo-step-desc">Real-time counseling support to prevent accidental seat forfeiture during fast 48-hour document verification windows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. MISTAKE ANALYSIS SECTION -->
+  <section id="mistakes" class="section section-surface">
+    <div class="container reveal">
+      <div class="section-header">
+        <div class="badge-tag badge-danger">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Critical Risks
+        </div>
+        <h2 class="section-title">The 1% Mistake That Ruins Ranks</h2>
+        <p class="section-subtitle">
+          Scoring high in JEE is only half the battle. JoSAA and CSAB counseling is a rigid maze where a single wrong click can permanently cost you your dream college.
+        </p>
+      </div>
+
+      <div class="grid-4">
+        <div class="card">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/><path d="m9 14 2 2 4-4"/></svg>
+          </div>
+          <h3 class="card-title">Wrong Choice Order</h3>
+          <p class="card-text">Placing a lower-tier college above a premium one permanently blocks you from better seats once allotted.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <h3 class="card-title">Document Invalidation</h3>
+          <p class="card-text">Outdated OBC-NCL or EWS certificates lead to instant category cancellation and forfeiture of allotted seats.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <h3 class="card-title">Premature Panic Settling</h3>
+          <p class="card-text">Students panic and freeze seats early in Round 2, completely missing out on massive rank drops during CSAB Special Rounds.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 class="card-title">State Quota Misuse</h3>
+          <p class="card-text">Failing to align State-of-Eligibility with 12th board passing certificates, throwing away vital Home State rank privileges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. REAL 4K IIT CAMPUS SHOWCASE & PROVEN PLACEMENTS -->
+  <section id="results" class="section">
+    <div class="container reveal">
+      <div class="section-header">
+        <div class="badge-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          Real Institutions &bull; 4K Ultra HD
+        </div>
+        <h2 class="section-title">Iconic IITs Where Our Students Study</h2>
+        <p class="section-subtitle">Real architectural campuses unlocked by our algorithmic choice-filling order lists.</p>
+      </div>
+
+      <!-- 4K Real IIT Campus Grid Gallery (Consistent Front-Facing Panoramic Elevation Views) -->
+      <div class="iit-gallery-grid">
+        <div class="iit-card glass-card">
+          <div class="iit-image-wrap">
+            <img src="assets/real-iit-roorkee.jpg" alt="Real IIT Roorkee Iconic James Thomason Main Building Front Elevation 4K" class="iit-photo">
+            <div class="iit-badge-overlay">NIRF Rank 5 &bull; Est. 1847</div>
+          </div>
+          <div class="iit-card-content">
+            <h3 class="iit-name">IIT Roorkee</h3>
+            <p class="iit-location">Thomason Heritage Campus, Uttarakhand</p>
+            <div class="iit-meta">
+              <span>Avg CSE: <strong>₹34.2 LPA</strong></span> &bull; <span>Closing AIR: <strong>412 - 4,850</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="iit-card glass-card">
+          <div class="iit-image-wrap">
+            <img src="assets/real-iit-bombay.jpg" alt="Real IIT Bombay Iconic Main Building Front Elevation Powai 4K" class="iit-photo">
+            <div class="iit-badge-overlay">NIRF Rank 3 &bull; Est. 1958</div>
+          </div>
+          <div class="iit-card-content">
+            <h3 class="iit-name">IIT Bombay</h3>
+            <p class="iit-location">Powai Lakefront Campus, Mumbai</p>
+            <div class="iit-meta">
+              <span>Avg CSE: <strong>₹36.8 LPA</strong></span> &bull; <span>Closing AIR: <strong>66 - 2,100</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="iit-card glass-card">
+          <div class="iit-image-wrap">
+            <img src="assets/real-iit-delhi.jpg" alt="Real IIT Delhi Iconic Dogra Hall & Main Building Front Elevation Hauz Khas 4K" class="iit-photo">
+            <div class="iit-badge-overlay">NIRF Rank 2 &bull; Est. 1961</div>
+          </div>
+          <div class="iit-card-content">
+            <h3 class="iit-name">IIT Delhi</h3>
+            <p class="iit-location">Hauz Khas Technology Corridor, New Delhi</p>
+            <div class="iit-meta">
+              <span>Avg CSE: <strong>₹35.4 LPA</strong></span> &bull; <span>Closing AIR: <strong>115 - 3,200</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="iit-card glass-card">
+          <div class="iit-image-wrap">
+            <img src="assets/real-iit-kharagpur.jpg" alt="Real IIT Kharagpur Iconic Central Clock Tower Main Building Front Elevation 4K" class="iit-photo">
+            <div class="iit-badge-overlay">NIRF Rank 4 &bull; Est. 1951</div>
+          </div>
+          <div class="iit-card-content">
+            <h3 class="iit-name">IIT Kharagpur</h3>
+            <p class="iit-location">Iconic Heritage Tower Campus, West Bengal</p>
+            <div class="iit-meta">
+              <span>Avg CSE: <strong>₹33.6 LPA</strong></span> &bull; <span>Closing AIR: <strong>260 - 3,800</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placement Cards -->
+      <div class="grid-3" style="margin-top: 3.5rem;">
+        <div class="glass-card result-card">
+          <div class="result-card-header">
+            <div class="result-author-avatar result-avatar-yellow">R</div>
+            <div class="result-author-info">
+              <h3 class="result-author-name">Rahul S.</h3>
+              <p class="result-author-college">IIT Roorkee &bull; CSE</p>
+              <span class="verified-round-badge">JoSAA Round 3 Allotment</span>
+            </div>
+          </div>
+          <div class="package-badge">
+            ₹34 LPA <span class="package-label">Placement Package</span>
+          </div>
+          <div class="quote-box">
+            "Vivan's guidance made it possible! My rank seemed borderline for top IIT branches, but his order list mapped out the perfect trajectory. I held nerve through the rounds with total confidence."
+          </div>
+        </div>
+
+        <div class="glass-card result-card reveal delay-100">
+          <div class="result-card-header">
+            <div class="result-author-avatar result-avatar-gold">P</div>
+            <div class="result-author-info">
+              <h3 class="result-author-name">Priya M.</h3>
+              <p class="result-author-college">NIT Surathkal &bull; ECE</p>
+              <span class="verified-round-badge">CSAB Special Round 1 Upgrade</span>
+            </div>
+          </div>
+          <div class="package-badge">
+            ₹28 LPA <span class="package-label">Placement Package</span>
+          </div>
+          <div class="quote-box">
+            "The choice-filling logic was spot on! I was lost with JoSAA rules before joining. Vivan's team helped me leverage my Home State quota to jump from Mechanical to Core ECE."
+          </div>
+        </div>
+
+        <div class="glass-card result-card reveal delay-200">
+          <div class="result-card-header">
+            <div class="result-author-avatar result-avatar-light">A</div>
+            <div class="result-author-info">
+              <h3 class="result-author-name">Aman T.</h3>
+              <p class="result-author-college">IIIT Allahabad &bull; IT</p>
+              <span class="verified-round-badge">JoSAA Round 5 Float Success</span>
+            </div>
+          </div>
+          <div class="package-badge">
+            ₹24 LPA <span class="package-label">Placement Package</span>
+          </div>
+          <div class="quote-box">
+            "I had a low percentile and almost took a private college paying donations. Vivan held my hand till the CSAB round and got me IIIT-A. The 24/7 team availability sets them apart."
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. MENTORSHIP TIERS & PACKAGES -->
+  <section id="pricing" class="section section-surface">
+    <div class="container reveal">
+      <div class="section-header">
+        <div class="badge-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Transparent Mentorship
+        </div>
+        <h2 class="section-title">Select Your Counseling Plan</h2>
+        <p class="section-subtitle">Dedicated 1-on-1 counseling architecture tailored to your rank bracket and target colleges.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Tier 1 -->
+        <div class="card pricing-card">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Essential List</h3>
+            <p class="pricing-desc">For students needing a verified, custom choice filling order PDF.</p>
+            <div class="pricing-badge-price">Custom Strategy</div>
+          </div>
+          <ul class="pricing-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Personalized 100+ Choice Order PDF</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Category &amp; Home State Optimization</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Mock Round List Revision</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> JoSAA + CSAB Form Guidelines</li>
+          </ul>
+          <a href="#booking-form" class="btn-secondary" style="width: 100%; text-align: center; justify-content: center; margin-top: 1.5rem;">Select Essential</a>
+        </div>
+
+        <!-- Tier 2 (Featured) -->
+        <div class="card pricing-card featured-pricing glass-accent">
+          <div class="pricing-popular-tag">Most Popular</div>
+          <div class="pricing-header">
+            <h3 class="pricing-title">JoSAA + CSAB Pro</h3>
+            <p class="pricing-desc">Complete end-to-end guidance through all 6 JoSAA rounds + 2 CSAB Special rounds.</p>
+            <div class="pricing-badge-price text-gold">Full Season Support</div>
+          </div>
+          <ul class="pricing-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Everything in Essential Plan</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 24/7 Dedicated WhatsApp &amp; Call Access</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Float / Freeze / Slide Decision Calls</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Document Verification &amp; SAF Safeguard</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> CSAB Spot Round Vacancy Tracking</li>
+          </ul>
+          <a href="#booking-form" class="btn-primary" style="width: 100%; text-align: center; justify-content: center; margin-top: 1.5rem;">Claim Pro Mentorship</a>
+        </div>
+
+        <!-- Tier 3 -->
+        <div class="card pricing-card">
+          <div class="pricing-header">
+            <h3 class="pricing-title">Elite VIP 1-on-1</h3>
+            <p class="pricing-desc">Direct 1-on-1 mentorship with Vivan Gupta covering all multi-counselings.</p>
+            <div class="pricing-badge-price">Direct Mentor Access</div>
+          </div>
+          <ul class="pricing-features">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Direct 1-on-1 Calls with Vivan Gupta</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> JoSAA + CSAB + JAC Delhi + COMEDK + BITS</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Unlimited Parent Consultation Video Calls</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Physical College Reporting Guidelines</li>
+          </ul>
+          <a href="#booking-form" class="btn-secondary" style="width: 100%; text-align: center; justify-content: center; margin-top: 1.5rem;">Select VIP 1-on-1</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. ADMISSION ROADMAP TIMELINE -->
+  <section id="process" class="section">
+    <div class="container reveal">
+      <div class="section-header">
+        <div class="badge-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+          Structured Execution
+        </div>
+        <h2 class="section-title">Our 6-Step Admission Roadmap</h2>
+        <p class="section-subtitle">From score release to campus induction, we manage every critical milestone.</p>
+      </div>
+
+      <div class="roadmap-grid">
+        <div class="roadmap-step-card">
+          <div class="roadmap-num">01</div>
+          <h4 class="roadmap-step-title">Percentile &amp; Quota Audit</h4>
+          <p class="roadmap-step-desc">Deep analysis of raw percentile, category validity, Home State eligibility, and branch aspirations.</p>
+        </div>
+
+        <div class="roadmap-step-card">
+          <div class="roadmap-num">02</div>
+          <h4 class="roadmap-step-title">Custom Choice PDF</h4>
+          <p class="roadmap-step-desc">Receive your exact choice-filling order list built on 5-year closing rank algorithms.</p>
+        </div>
+
+        <div class="roadmap-step-card">
+          <div class="roadmap-num">03</div>
+          <h4 class="roadmap-step-title">Mock Allocation Revisions</h4>
+          <p class="roadmap-step-desc">Fine-tune order hierarchy based on JoSAA live mock allocations before locking.</p>
+        </div>
+
+        <div class="roadmap-step-card">
+          <div class="roadmap-num">04</div>
+          <h4 class="roadmap-step-title">Float &amp; Slide Navigation</h4>
+          <p class="roadmap-step-desc">Round-by-round guidance to ensure seamless upgrades without risking current seats.</p>
+        </div>
+
+        <div class="roadmap-step-card">
+          <div class="roadmap-num">05</div>
+          <h4 class="roadmap-step-title">CSAB Special Rounds</h4>
+          <p class="roadmap-step-desc">Target vacant seats during special rounds for massive branch upgrades.</p>
+        </div>
+
+        <div class="roadmap-step-card">
+          <div class="roadmap-num">06</div>
+          <h4 class="roadmap-step-title">Campus Induction</h4>
+          <p class="roadmap-step-desc">Complete document checklist assistance for seamless physical reporting at college.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. AUTHENTIC VERIFIED REVIEWS & WALL OF LOVE -->
+  <section id="testimonials" class="section section-surface">
+    <div class="container reveal">
+      <div class="section-header">
+        <div class="badge-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          100% Genuine Feedback
+        </div>
+        <h2 class="section-title">Verified Student &amp; Parent Reviews</h2>
+        <p class="section-subtitle">Real experiences from families who trusted our data-backed strategy.</p>
+      </div>
+
+      <!-- Success Story Highlight with Generated Photo -->
+      <div class="success-story-card glass-accent reveal">
+        <div class="success-story-grid">
+          <div class="success-story-img-wrap">
+            <img src="assets/student-success-badge.svg" alt="Official Verified JoSAA Round Allotment Confirmation Record" class="success-story-img">
+          </div>
+          <div class="success-story-content">
+            <div class="verified-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#10B981"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              Verified JoSAA Round Allotment
+            </div>
+            <h3 class="success-headline">"Saved our family from paying ₹15 Lakhs in management quotas."</h3>
+            <p class="success-p">
+              "We were terrified after the initial Mains results. Coaching institutes offered zero counseling support. Vivan mapped out our daughter's state quota in NIT Surathkal ECE and guided us through every Float round. His 24/7 responsiveness kept us calm."
+            </p>
+            <div class="success-author">
+              <strong>Mrs. &amp; Mr. K. Sharma</strong> (Parents) &bull; Admitted to NIT Surathkal ECE
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Authentic Reviews -->
+      <div class="grid-3" style="margin-top: 2.5rem;">
+        <div class="card">
+          <div class="star-group">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="card-text testimonial-text">"I had prepared my own list from YouTube and showed it to Vivan. He immediately caught 3 catastrophic ordering mistakes that would have locked me out of IIIT-Allahabad. Best investment of my career."</p>
+          <div class="testimonial-author">- Ankit K. (AIR 8,410 &bull; IIIT Allahabad)</div>
+        </div>
+
+        <div class="card">
+          <div class="star-group">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="card-text testimonial-text">"The WhatsApp support during JoSAA seat acceptance fee payment and document verification was lightning fast. Every doubt cleared within 5 minutes. Zero stress throughout."</p>
+          <div class="testimonial-author">- Sneha R. (NIT Trichy CS)</div>
+        </div>
+
+        <div class="card">
+          <div class="star-group">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#F59E0B"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="card-text testimonial-text">"They predicted I would get a seat in Round 5 of JoSAA, and it occurred exactly as modeled. Trust their data, it is accurate and backed by real historic models."</p>
+          <div class="testimonial-author">- Divyansh M. (IIT BHU Varanasi)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FAQ SECTION -->
+  <section id="faq" class="section">
+    <div class="container reveal">
+      <div class="section-header">
+        <div class="badge-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          Frequently Asked Questions
+        </div>
+        <h2 class="section-title">Everything You Need To Know</h2>
+        <p class="section-subtitle">Clear your doubts before securing your priority counseling slot.</p>
+      </div>
+
+      <div class="accordion-wrapper">
+        <div class="accordion-item">
+          <button type="button" class="accordion-header">
+            <span>What if my percentile is between 80 - 95%?</span>
+            <span class="accordion-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Even with an 80-95 percentile, a strategic combination of JoSAA Home State quotas, CSAB Special Spot Rounds, and state counselings (JAC Delhi, IPU, MHT-CET, COMEDK) can secure top government colleges. We audit every available option.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button type="button" class="accordion-header">
+            <span>Do you only support JoSAA &amp; CSAB?</span>
+            <span class="accordion-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              No! While JoSAA and CSAB are our primary specialties, our Pro and VIP plans provide end-to-end guidance for JAC Delhi (DTU/NSUT), JAC Chandigarh, IPU, MHT-CET, WBJEE, and COMEDK based on your rank and eligibility.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button type="button" class="accordion-header">
+            <span>How is your choice-filling PDF different from free lists?</span>
+            <span class="accordion-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Generic online PDFs ignore your unique combination of Category, Home State Quota, Branch Trade-offs (e.g., Old IIT Core vs New IIT CS), and Placement vs Higher Study ambitions. Our lists are custom-computed individually for your exact rank.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button type="button" class="accordion-header">
+            <span>Can I talk to Vivan Gupta before enrolling?</span>
+            <span class="accordion-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              Yes. Submit your details in the booking form below. Our chief counseling team will contact you via WhatsApp or Phone to review your profile and explain which plan suits your rank bracket best.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button type="button" class="accordion-header">
+            <span>What happens during Float, Freeze, and Slide rounds?</span>
+            <span class="accordion-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              We provide round-by-round guidance on whether you should 'Float' to aim for a higher branch in subsequent rounds, 'Slide' within the same institute, or 'Freeze' your dream seat, ensuring zero forfeiture of Seat Acceptance Fees.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. LEAD CAPTURE BOOKING FORM -->
+  <section id="booking-form" class="section booking-section">
+    <div class="container reveal">
+      <div class="form-container">
+        
+        <div class="form-header">
+          <div class="badge-tag badge-danger">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> 
+            Limited Mentorship Slots Available
+          </div>
+          <h2 class="section-title">Secure Your Counseling Slot.</h2>
+          <p class="section-subtitle">Fill this priority form to receive a personalized callback from our chief counseling strategists.</p>
+        </div>
+
+        <form id="counseling-lead-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="full-name" class="form-label">Student / Parent Full Name</label>
+              <input type="text" id="full-name" required placeholder="e.g. Rahul Sharma" class="form-input" autocomplete="name">
             </div>
 
-            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Request Submitted Successfully! Our team will contact you on WhatsApp shortly.');">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="space-y-2">
-                        <label class="text-sm font-medium text-gray-300 ml-1">Full Name</label>
-                        <input type="text" required placeholder="Enter your name" class="w-full px-4 py-3 rounded-xl focus:ring-2 focus:ring-brand-yellow/50 transition-all">
-                    </div>
-                    
-                    <div class="space-y-2">
-                        <label class="text-sm font-medium text-gray-300 ml-1">WhatsApp Number</label>
-                        <div class="relative">
-                            <span class="absolute left-4 top-3 text-gray-400">+91</span>
-                            <input type="tel" required pattern="[0-9]{10}" placeholder="10-digit mobile number" class="w-full pl-12 pr-4 py-3 rounded-xl focus:ring-2 focus:ring-brand-yellow/50 transition-all">
-                        </div>
-                    </div>
-                </div>
+            <div class="form-group">
+              <label for="whatsapp-num" class="form-label">WhatsApp Mobile Number</label>
+              <input type="tel" id="whatsapp-num" required pattern="[0-9]{10}" placeholder="10-digit WhatsApp number" class="form-input" autocomplete="tel">
+            </div>
+          </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="space-y-2">
-                        <label class="text-sm font-medium text-gray-300 ml-1">JEE Mains Percentile / Rank</label>
-                        <input type="number" step="0.0000001" required placeholder="e.g. 95.45" class="w-full px-4 py-3 rounded-xl focus:ring-2 focus:ring-brand-yellow/50 transition-all">
-                    </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="jee-rank" class="form-label">JEE Mains Percentile / CRL Rank</label>
+              <input type="number" step="any" id="jee-rank" required placeholder="e.g. 96.85 or AIR 24500" class="form-input" inputmode="decimal">
+            </div>
 
-                    <div class="space-y-2">
-                        <label class="text-sm font-medium text-gray-300 ml-1">Category</label>
-                        <select required class="w-full px-4 py-3 rounded-xl focus:ring-2 focus:ring-brand-yellow/50 transition-all appearance-none cursor-pointer">
-                            <option value="" disabled selected>Select Category</option>
-                            <option value="gen">General</option>
-                            <option value="obc">OBC-NCL</option>
-                            <option value="ews">EWS</option>
-                            <option value="sc">SC</option>
-                            <option value="st">ST</option>
-                        </select>
-                    </div>
-                </div>
+            <div class="form-group">
+              <label for="category" class="form-label">Reservation Category</label>
+              <select id="category" required class="form-select">
+                <option value="" disabled selected>Select Category</option>
+                <option value="gen">General (OPEN)</option>
+                <option value="ews">GEN - EWS</option>
+                <option value="obc">OBC - NCL</option>
+                <option value="sc">SC Category</option>
+                <option value="st">ST Category</option>
+              </select>
+            </div>
+          </div>
 
-                <div class="space-y-2">
-                    <label class="text-sm font-medium text-gray-300 ml-1">Target College / Specific Doubt (Optional)</label>
-                    <input type="text" placeholder="e.g. Can I get NIT Trichy CS?" class="w-full px-4 py-3 rounded-xl focus:ring-2 focus:ring-brand-yellow/50 transition-all">
-                </div>
+          <div class="form-group">
+            <label for="target-college" class="form-label">Target College / Branch Doubts (Optional)</label>
+            <input type="text" id="target-college" placeholder="e.g. Best NIT for CS or IIIT choices" class="form-input">
+          </div>
 
-                <button type="submit" class="w-full bg-brand-yellow text-black font-extrabold text-xl py-4 rounded-xl glow-btn-yellow mt-6 flex items-center justify-center gap-3 hover:bg-yellow-400">
-                    Submit Details & Get Contacted <i class="fa-solid fa-lock text-base"></i>
-                </button>
-                
-                <p class="text-center text-xs text-gray-500 mt-4">
-                    <i class="fa-solid fa-shield-halved mr-1"></i> Your data is 100% secure and will only be used by our counseling experts.
-                </p>
-            </form>
-        </div>
-    </section>
+          <button type="submit" class="btn-primary btn-submit">
+            <span>Submit Details &amp; Get Priority Contact</span> 
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
 
-    <footer class="border-t border-white/10 py-10 text-center text-gray-500 text-sm mt-0 bg-[#030303]">
-        <div class="flex items-center justify-center gap-2 mb-4">
-            <i class="fa-solid fa-graduation-cap text-2xl text-brand-yellow"></i>
-            <span class="text-xl font-bold tracking-tight text-white">JEE<span class="font-light text-gray-400">Counseling</span></span>
-        </div>
-        <p class="mb-2">&copy; 2026 Vivan Gupta Counseling. All rights reserved.</p>
-        <p class="text-brand-yellow font-medium tracking-wide">Learn more, Earn more.</p>
-    </footer>
+          <p class="form-security-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 
+            Your information is 100% confidential and only utilized by our counseling team.
+          </p>
+        </form>
 
-    <script>
-        // Scroll Reveal Logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const reveals = document.querySelectorAll('.reveal');
-            
-            const revealOnScroll = () => {
-                const windowHeight = window.innerHeight;
-                const elementVisible = 100;
-                
-                reveals.forEach(reveal => {
-                    const elementTop = reveal.getBoundingClientRect().top;
-                    if (elementTop < windowHeight - elementVisible) {
-                        reveal.classList.add('active');
-                    }
-                });
-            };
+      </div>
+    </div>
+  </section>
 
-            window.addEventListener('scroll', revealOnScroll);
-            revealOnScroll(); // Trigger once on load
-        });
+  <!-- 13. SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="#" aria-label="Vivan Gupta JEE Counseling Footer Home">
+        <img src="assets/logo-dark.svg" alt="Vivan Gupta JEE Counseling Logo" class="footer-brand-logo brand-logo-img">
+      </a>
+      
+      <div class="footer-copy-block">
+        <p>&copy; 2026 Vivan Gupta JEE Counseling. All Rights Reserved.</p>
+        <p class="footer-tagline">Data-backed engineering admissions guidance &bull; Alumnus Led.</p>
+      </div>
 
-        // FAQ Toggle Logic
-        function toggleFaq(button) {
-            const content = button.nextElementSibling;
-            const icon = button.querySelector('i');
-            
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                icon.style.transform = 'rotate(180deg)';
-                button.classList.add('text-brand-yellow');
-            } else {
-                content.classList.add('hidden');
-                icon.style.transform = 'rotate(0deg)';
-                button.classList.remove('text-brand-yellow');
-            }
-        }
-    </script>
+      <!-- NexGen Digital Attribution -->
+      <div class="nexgen-attribution">
+        <span>Built with precision by NexGen Digital &bull;</span>
+        <a href="https://nexgendigital.tech" target="_blank" rel="noopener noreferrer" class="nexgen-link">
+          <img src="https://res.cloudinary.com/sahbncq8/image/upload/v1786076819/NexGen_vzsaqb.png" alt="NexGen Digital Logo" class="nexgen-logo-img">
+          nexgendigital.tech
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom Master Interactive JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 36" width="160" height="36" fill="none">
+  <path d="M6 8 L16 28 L26 8" stroke="url(#nex-grad-light)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M16 18 L26 28 L36 8" stroke="#111827" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="44" y="24" font-family="'Outfit', 'Inter', sans-serif" font-size="16" font-weight="700" fill="#111827" letter-spacing="-0.3">NexGen <tspan font-weight="400" fill="#6B7280">Digital</tspan></text>
+  <defs>
+    <linearGradient id="nex-grad-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B00" />
+      <stop offset="100%" stop-color="#FF2D55" />
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 54" width="320" height="54" fill="none">
+  <defs>
+    <linearGradient id="gold-grad-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="shield-grad-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E2430"/>
+      <stop offset="100%" stop-color="#0F131A"/>
+    </linearGradient>
+    <filter id="subtle-glow-dark" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#F59E0B" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Luxury Shield Emblem -->
+  <g transform="translate(6, 5)" filter="url(#subtle-glow-dark)">
+    <!-- Hexagonal Shield Base -->
+    <path d="M22 2 L40 10 V26 C40 35 22 43 22 43 C22 43 4 35 4 26 V10 L22 2 Z" fill="url(#shield-grad-dark)" stroke="url(#gold-grad-dark)" stroke-width="1.75"/>
+    
+    <!-- Stylized Compass / Monogram V -->
+    <path d="M22 8 L32 23 H26 L22 15 L18 23 H12 L22 8 Z" fill="url(#gold-grad-dark)"/>
+    <path d="M22 18 L29 32 L22 29 L15 32 L22 18 Z" fill="#FDE68A" fill-opacity="0.9"/>
+    
+    <!-- Star Sparkle at Top -->
+    <circle cx="22" cy="7" r="1.5" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(56, 12)">
+    <!-- Main Name -->
+    <text x="0" y="16" font-family="'Outfit', 'Inter', -apple-system, sans-serif" font-size="19" font-weight="900" fill="#FFFFFF" letter-spacing="0.04em">VIVAN GUPTA</text>
+    
+    <!-- Gold Dot Accent -->
+    <circle cx="132" cy="11" r="2.5" fill="url(#gold-grad-dark)"/>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="32" font-family="'Inter', -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#F59E0B" letter-spacing="0.14em" text-transform="uppercase">JEE STRATEGY &amp; COUNSELING</text>
+  </g>
+</svg>

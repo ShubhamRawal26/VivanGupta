@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dashBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0d14"/>
+      <stop offset="100%" stop-color="#040507"/>
+    </linearGradient>
+    <linearGradient id="accentGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="greenBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="680" rx="24" fill="url(#dashBg)" stroke="rgba(245,158,11,0.3)" stroke-width="2"/>
+
+  <!-- Top App Navigation Header -->
+  <rect x="30" y="25" width="1140" height="65" rx="16" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)"/>
+  <circle cx="65" cy="57" r="8" fill="#ef4444"/>
+  <circle cx="90" cy="57" r="8" fill="#f59e0b"/>
+  <circle cx="115" cy="57" r="8" fill="#10b981"/>
+  <text x="150" y="63" fill="#ffffff" font-family="Inter, sans-serif" font-size="16" font-weight="800" letter-spacing="0.5">Vivan Gupta &bull; JoSAA &amp; CSAB Choice Command Center</text>
+  
+  <rect x="920" y="40" width="230" height="35" rx="10" fill="rgba(245,158,11,0.15)" stroke="rgba(245,158,11,0.4)"/>
+  <circle cx="940" cy="57" r="5" fill="#10b981"/>
+  <text x="955" y="62" fill="#fbbf24" font-family="Inter, sans-serif" font-size="12" font-weight="700">Live Cutoff Database 2026</text>
+
+  <!-- Left Column: Student Dossier & Multi-Round Tracker -->
+  <g transform="translate(40, 115)">
+    <rect width="420" height="520" rx="18" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)"/>
+    <text x="24" y="40" fill="#f59e0b" font-family="Inter, sans-serif" font-size="12" font-weight="800" text-transform="uppercase" letter-spacing="1">Simulated Student Profile</text>
+    <text x="24" y="70" fill="#ffffff" font-family="Inter, sans-serif" font-size="20" font-weight="800">AIR 4,120 &bull; OBC-NCL (HS: UP)</text>
+    
+    <rect x="24" y="90" width="372" height="75" rx="12" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.2)"/>
+    <text x="40" y="116" fill="#9ca3af" font-family="Inter, sans-serif" font-size="12">Target Dream Tier</text>
+    <text x="40" y="145" fill="#fbbf24" font-family="Inter, sans-serif" font-size="18" font-weight="800">IIT Roorkee / IIT Bombay Core</text>
+
+    <!-- Round by Round Progression List -->
+    <text x="24" y="195" fill="#9ca3af" font-family="Inter, sans-serif" font-size="13" font-weight="700">MULTI-ROUND ALLOTMENT TRAJECTORY</text>
+    
+    <!-- Round 1 -->
+    <rect x="24" y="215" width="372" height="55" rx="10" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)"/>
+    <text x="40" y="238" fill="#9ca3af" font-family="Inter, sans-serif" font-size="11" font-weight="700">Round 1 (JoSAA)</text>
+    <text x="40" y="257" fill="#d1d5db" font-family="Inter, sans-serif" font-size="13" font-weight="600">NIT Allahabad - CSE</text>
+    <text x="320" y="248" fill="#3b82f6" font-family="Inter, sans-serif" font-size="11" font-weight="700">FLOAT</text>
+
+    <!-- Round 3 -->
+    <rect x="24" y="280" width="372" height="55" rx="10" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)"/>
+    <text x="40" y="303" fill="#9ca3af" font-family="Inter, sans-serif" font-size="11" font-weight="700">Round 3 (JoSAA)</text>
+    <text x="40" y="322" fill="#d1d5db" font-family="Inter, sans-serif" font-size="13" font-weight="600">IIT Roorkee - Chemical (Upgraded)</text>
+    <text x="320" y="313" fill="#3b82f6" font-family="Inter, sans-serif" font-size="11" font-weight="700">FLOAT</text>
+
+    <!-- Round 6 -->
+    <rect x="24" y="345" width="372" height="65" rx="10" fill="rgba(245,158,11,0.12)" stroke="rgba(245,158,11,0.4)"/>
+    <text x="40" y="368" fill="#f59e0b" font-family="Inter, sans-serif" font-size="11" font-weight="800">Round 6 FINAL ALLOTMENT</text>
+    <text x="40" y="392" fill="#ffffff" font-family="Inter, sans-serif" font-size="15" font-weight="800">IIT Roorkee - Data Science &amp; AI</text>
+    <rect x="305" y="362" width="75" height="24" rx="6" fill="#10b981"/>
+    <text x="317" y="379" fill="#ffffff" font-family="Inter, sans-serif" font-size="11" font-weight="800">FREEZE</text>
+
+    <!-- CSAB Special Upgrade Info -->
+    <rect x="24" y="425" width="372" height="75" rx="10" fill="rgba(16,185,129,0.08)" stroke="rgba(16,185,129,0.3)"/>
+    <text x="40" y="450" fill="#34d399" font-family="Inter, sans-serif" font-size="12" font-weight="700">+18,400 AIR Rank Value Created</text>
+    <text x="40" y="475" fill="#9ca3af" font-family="Inter, sans-serif" font-size="11">Achieved via category-optimized choice sequence order.</text>
+  </g>
+
+  <!-- Right Column: Choice Distribution & Strategic Matrix Visualization -->
+  <g transform="translate(480, 115)">
+    <rect width="680" height="520" rx="18" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)"/>
+    
+    <text x="30" y="40" fill="#f59e0b" font-family="Inter, sans-serif" font-size="12" font-weight="800" text-transform="uppercase" letter-spacing="1">Choice Ordering Matrix</text>
+    <text x="30" y="70" fill="#ffffff" font-family="Inter, sans-serif" font-size="20" font-weight="800">Optimized 150+ College Preference Hierarchy</text>
+
+    <!-- Comparison Bars -->
+    <g transform="translate(30, 95)">
+      <text x="0" y="20" fill="#d1d5db" font-family="Inter, sans-serif" font-size="13" font-weight="600">Top 7 IITs (CSE / AI / EE)</text>
+      <rect x="0" y="30" width="620" height="14" rx="7" fill="rgba(255,255,255,0.06)"/>
+      <rect x="0" y="30" width="540" height="14" rx="7" fill="url(#accentGold)"/>
+      <text x="550" y="42" fill="#f59e0b" font-family="Inter, sans-serif" font-size="11" font-weight="700">88% Prob</text>
+
+      <text x="0" y="75" fill="#d1d5db" font-family="Inter, sans-serif" font-size="13" font-weight="600">Top 3 NITs (Trichy / Surathkal CSE)</text>
+      <rect x="0" y="85" width="620" height="14" rx="7" fill="rgba(255,255,255,0.06)"/>
+      <rect x="0" y="85" width="590" height="14" rx="7" fill="url(#greenBar)"/>
+      <text x="600" y="97" fill="#10b981" font-family="Inter, sans-serif" font-size="11" font-weight="700">98% Prob</text>
+
+      <text x="0" y="130" fill="#d1d5db" font-family="Inter, sans-serif" font-size="13" font-weight="600">Top IIITs (Allahabad / Hyderabad / Pune)</text>
+      <rect x="0" y="140" width="620" height="14" rx="7" fill="rgba(255,255,255,0.06)"/>
+      <rect x="0" y="140" width="610" height="14" rx="7" fill="url(#greenBar)"/>
+      <text x="620" y="152" fill="#10b981" font-family="Inter, sans-serif" font-size="11" font-weight="700">99% Safe</text>
+    </g>
+
+    <!-- Choice Table Preview -->
+    <g transform="translate(30, 280)">
+      <rect width="620" height="200" rx="12" fill="rgba(0,0,0,0.3)" stroke="rgba(255,255,255,0.06)"/>
+      
+      <!-- Table Header -->
+      <rect width="620" height="35" rx="12" fill="rgba(245,158,11,0.08)"/>
+      <text x="20" y="23" fill="#f59e0b" font-family="Inter, sans-serif" font-size="11" font-weight="700">CHOICE #</text>
+      <text x="90" y="23" fill="#f59e0b" font-family="Inter, sans-serif" font-size="11" font-weight="700">INSTITUTE</text>
+      <text x="290" y="23" fill="#f59e0b" font-family="Inter, sans-serif" font-size="11" font-weight="700">BRANCH</text>
+      <text x="450" y="23" fill="#f59e0b" font-family="Inter, sans-serif" font-size="11" font-weight="700">QUOTA</text>
+      <text x="540" y="23" fill="#f59e0b" font-family="Inter, sans-serif" font-size="11" font-weight="700">STATUS</text>
+
+      <!-- Row 1 -->
+      <text x="20" y="65" fill="#fbbf24" font-family="Inter, sans-serif" font-size="12" font-weight="700">01</text>
+      <text x="90" y="65" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">IIT Bombay</text>
+      <text x="290" y="65" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">Computer Science &amp; Engg</text>
+      <text x="450" y="65" fill="#9ca3af" font-family="Inter, sans-serif" font-size="12">OPEN (AI)</text>
+      <text x="540" y="65" fill="#f59e0b" font-family="Inter, sans-serif" font-size="11" font-weight="700">Ambition</text>
+
+      <!-- Row 2 -->
+      <line x1="20" y1="80" x2="600" y2="80" stroke="rgba(255,255,255,0.04)"/>
+      <text x="20" y="105" fill="#fbbf24" font-family="Inter, sans-serif" font-size="12" font-weight="700">02</text>
+      <text x="90" y="105" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">IIT Delhi</text>
+      <text x="290" y="105" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">Mathematics &amp; Computing</text>
+      <text x="450" y="105" fill="#9ca3af" font-family="Inter, sans-serif" font-size="12">OPEN (AI)</text>
+      <text x="540" y="105" fill="#f59e0b" font-family="Inter, sans-serif" font-size="11" font-weight="700">Ambition</text>
+
+      <!-- Row 3 (Allotted) -->
+      <line x1="20" y1="120" x2="600" y2="120" stroke="rgba(255,255,255,0.04)"/>
+      <rect x="10" y="125" width="600" height="35" rx="8" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.3)"/>
+      <text x="20" y="148" fill="#34d399" font-family="Inter, sans-serif" font-size="12" font-weight="800">03</text>
+      <text x="90" y="148" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="800">IIT Roorkee</text>
+      <text x="290" y="148" fill="#34d399" font-family="Inter, sans-serif" font-size="12" font-weight="700">Data Science &amp; AI</text>
+      <text x="450" y="148" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">OBC-NCL</text>
+      <text x="540" y="148" fill="#10b981" font-family="Inter, sans-serif" font-size="11" font-weight="800">ALLOTTED</text>
+
+      <!-- Row 4 -->
+      <line x1="20" y1="168" x2="600" y2="168" stroke="rgba(255,255,255,0.04)"/>
+      <text x="20" y="188" fill="#fbbf24" font-family="Inter, sans-serif" font-size="12" font-weight="700">04</text>
+      <text x="90" y="188" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">IIT Kharagpur</text>
+      <text x="290" y="188" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">Artificial Intelligence</text>
+      <text x="450" y="188" fill="#9ca3af" font-family="Inter, sans-serif" font-size="12">OBC-NCL</text>
+      <text x="540" y="188" fill="#6b7280" font-family="Inter, sans-serif" font-size="11">Protected</text>
+    </g>
+  </g>
+</svg>

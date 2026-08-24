@@ -1,0 +1,13 @@
+{
+  "name": "vivan-gupta-counseling",
+  "version": "1.0.0",
+  "description": "Vivan Gupta JEE Mains & Advanced Counseling Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve -l 3000 .",
+    "start": "npx serve -l 3000 ."
+  },
+  "keywords": ["jee", "counseling", "iit", "josaa", "csab"],
+  "author": "Vivan Gupta",
+  "license": "ISC"
+}

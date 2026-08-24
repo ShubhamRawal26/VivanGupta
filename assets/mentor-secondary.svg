@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sec-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181818" />
+      <stop offset="100%" stop-color="#0D0D0D" />
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B00" />
+      <stop offset="50%" stop-color="#FFD700" />
+      <stop offset="100%" stop-color="#FF2D55" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#sec-bg)"/>
+  
+  <!-- Subtle tech pattern -->
+  <circle cx="300" cy="280" r="180" fill="none" stroke="rgba(255, 107, 0, 0.15)" stroke-width="2" stroke-dasharray="8 8"/>
+  <circle cx="300" cy="280" r="120" fill="none" stroke="rgba(255, 215, 0, 0.2)" stroke-width="1.5"/>
+  
+  <!-- Analytics / Strategy badge card -->
+  <g transform="translate(100, 150)">
+    <rect x="0" y="0" width="400" height="260" rx="20" fill="rgba(20, 20, 20, 0.9)" stroke="rgba(255, 107, 0, 0.4)" stroke-width="1.5" filter="drop-shadow(0 20px 30px rgba(0,0,0,0.5))"/>
+    
+    <text x="30" y="50" font-family="'Outfit', sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">JoSAA / CSAB Strategy Matrix</text>
+    <text x="30" y="75" font-family="'Inter', sans-serif" font-size="13" fill="rgba(255,255,255,0.6)">Data-Backed Rank Mapping Algorithm</text>
+    
+    <!-- Bar charts -->
+    <rect x="30" y="110" width="40" height="100" rx="6" fill="rgba(255,255,255,0.05)"/>
+    <rect x="30" y="140" width="40" height="70" rx="6" fill="url(#accent-grad)"/>
+    
+    <rect x="90" y="110" width="40" height="100" rx="6" fill="rgba(255,255,255,0.05)"/>
+    <rect x="90" y="120" width="40" height="90" rx="6" fill="#FFD700"/>
+    
+    <rect x="150" y="110" width="40" height="100" rx="6" fill="rgba(255,255,255,0.05)"/>
+    <rect x="150" y="160" width="40" height="50" rx="6" fill="#FF6B00"/>
+
+    <rect x="210" y="110" width="40" height="100" rx="6" fill="rgba(255,255,255,0.05)"/>
+    <rect x="210" y="130" width="40" height="80" rx="6" fill="#FF2D55"/>
+    
+    <!-- Metric callouts -->
+    <g transform="translate(270, 110)">
+      <rect x="0" y="0" width="100" height="44" rx="8" fill="rgba(255,107,0,0.1)" stroke="rgba(255,107,0,0.3)"/>
+      <text x="12" y="20" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#FFD700">99.4%</text>
+      <text x="12" y="34" font-family="'Inter', sans-serif" font-size="10" fill="#AAAAAA">Accuracy</text>
+    </g>
+    
+    <g transform="translate(270, 166)">
+      <rect x="0" y="0" width="100" height="44" rx="8" fill="rgba(255,45,85,0.1)" stroke="rgba(255,45,85,0.3)"/>
+      <text x="12" y="20" font-family="'Outfit', sans-serif" font-size="14" font-weight="700" fill="#FF2D55">1,000+</text>
+      <text x="12" y="34" font-family="'Inter', sans-serif" font-size="10" fill="#AAAAAA">Placed</text>
+    </g>
+  </g>
+  
+  <g transform="translate(150, 480)">
+    <text x="150" y="30" font-family="'Outfit', sans-serif" font-size="24" font-weight="800" fill="#FFFFFF" text-anchor="middle">Strategic Counseling Session</text>
+    <text x="150" y="60" font-family="'Inter', sans-serif" font-size="14" fill="#FF6B00" text-anchor="middle">Hover View • IIIT Pune Data Desk</text>
+  </g>
+</svg>
