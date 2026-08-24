@@ -21,7 +21,7 @@
   <circle cx="60" cy="58" r="7" fill="#ef4444"/>
   <circle cx="80" cy="58" r="7" fill="#f59e0b"/>
   <circle cx="100" cy="58" r="7" fill="#10b981"/>
-  <text x="130" y="63" fill="#f3f4f6" font-family="Inter, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5">JoSAA &amp; CSAB Multi-Round Allocation Engine &bull; Vivan Strategy Matrix</text>
+  <text x="130" y="63" fill="#f3f4f6" font-family="Inter, sans-serif" font-size="14" font-weight="700" letter-spacing="0.5">JoSAA &amp; CSAB Multi-Round Allocation Engine &#8226; Vivan Strategy Matrix</text>
   <rect x="640" y="44" width="110" height="28" rx="14" fill="rgba(245,158,11,0.15)" stroke="rgba(245,158,11,0.4)"/>
   <text x="662" y="62" fill="#f59e0b" font-family="Inter, sans-serif" font-size="11" font-weight="700">v4.8 ACTIVE</text>
 
@@ -33,8 +33,8 @@
     <text x="62" y="32" fill="#ffffff" font-family="Inter, sans-serif" font-size="15" font-weight="700">Rank &amp; Quota Auditing</text>
     <text x="62" y="49" fill="#9ca3af" font-family="Inter, sans-serif" font-size="11">CRL vs Category vs HS/OS Delta</text>
     <line x1="16" y1="66" x2="314" y2="66" stroke="rgba(255,255,255,0.06)"/>
-    <text x="16" y="90" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&bull; State-of-Eligibility Quota Mapping</text>
-    <text x="16" y="112" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&bull; Female Supernumerary Optimization</text>
+    <text x="16" y="90" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&#8226; State-of-Eligibility Quota Mapping</text>
+    <text x="16" y="112" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&#8226; Female Supernumerary Optimization</text>
   </g>
 
   <!-- Step 2 Card: Choice Tiering -->
@@ -43,10 +43,10 @@
     <rect x="16" y="16" width="34" height="34" rx="8" fill="rgba(245,158,11,0.15)"/>
     <text x="24" y="39" fill="#f59e0b" font-family="Inter, sans-serif" font-size="16" font-weight="800">02</text>
     <text x="62" y="32" fill="#ffffff" font-family="Inter, sans-serif" font-size="15" font-weight="700">3-Tier Preference Layering</text>
-    <text x="62" y="49" fill="#9ca3af" font-family="Inter, sans-serif" font-size="11">Ambition &bull; Target &bull; Ironclad Safe</text>
+    <text x="62" y="49" fill="#9ca3af" font-family="Inter, sans-serif" font-size="11">Ambition &#8226; Target &#8226; Ironclad Safe</text>
     <line x1="16" y1="66" x2="314" y2="66" stroke="rgba(255,255,255,0.06)"/>
-    <text x="16" y="90" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&bull; Dream Tier: Top 7 IITs / NIT Trichy CS</text>
-    <text x="16" y="112" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&bull; Core Tier: 100% Guaranteed CS/IT/ECE</text>
+    <text x="16" y="90" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&#8226; Dream Tier: Top 7 IITs / NIT Trichy CS</text>
+    <text x="16" y="112" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&#8226; Core Tier: 100% Guaranteed CS/IT/ECE</text>
   </g>
 
   <!-- Connection Flow Arrows -->
@@ -64,8 +64,8 @@
     <text x="62" y="32" fill="#ffffff" font-family="Inter, sans-serif" font-size="15" font-weight="700">Float &amp; Slide Protocol</text>
     <text x="62" y="49" fill="#9ca3af" font-family="Inter, sans-serif" font-size="11">Rounds 1 to 6 Active Progression</text>
     <line x1="16" y1="66" x2="314" y2="66" stroke="rgba(255,255,255,0.06)"/>
-    <text x="16" y="90" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&bull; Zero Seat Cancellation Risk</text>
-    <text x="16" y="112" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&bull; 48-Hr Document Verification Shield</text>
+    <text x="16" y="90" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&#8226; Zero Seat Cancellation Risk</text>
+    <text x="16" y="112" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&#8226; 48-Hr Document Verification Shield</text>
   </g>
 
   <!-- Step 4 Card: CSAB Special Spot Rounds -->
@@ -76,8 +76,8 @@
     <text x="62" y="32" fill="#ffffff" font-family="Inter, sans-serif" font-size="15" font-weight="700">CSAB Spot Round Maximizer</text>
     <text x="62" y="49" fill="#34d399" font-family="Inter, sans-serif" font-size="11">Aggressive Rank Jumps (+15,000 Delta)</text>
     <line x1="16" y1="66" x2="314" y2="66" stroke="rgba(255,255,255,0.06)"/>
-    <text x="16" y="90" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&bull; Vacant Seat Conversion Analysis</text>
-    <text x="16" y="112" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&bull; Final Upgrades to Elite IIITs &amp; NITs</text>
+    <text x="16" y="90" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&#8226; Vacant Seat Conversion Analysis</text>
+    <text x="16" y="112" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">&#8226; Final Upgrades to Elite IIITs &amp; NITs</text>
   </g>
 
   <path d="M 380 395 L 420 395" stroke="#10b981" stroke-width="2" stroke-dasharray="4 4" fill="none"/>

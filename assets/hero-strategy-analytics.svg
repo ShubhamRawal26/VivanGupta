@@ -21,17 +21,17 @@
   <circle cx="65" cy="57" r="8" fill="#ef4444"/>
   <circle cx="90" cy="57" r="8" fill="#f59e0b"/>
   <circle cx="115" cy="57" r="8" fill="#10b981"/>
-  <text x="150" y="63" fill="#ffffff" font-family="Inter, sans-serif" font-size="16" font-weight="800" letter-spacing="0.5">Vivan Gupta &bull; JoSAA &amp; CSAB Choice Command Center</text>
+  <text x="150" y="63" fill="#ffffff" font-family="Inter, sans-serif" font-size="16" font-weight="800" letter-spacing="0.5">Vivan Gupta &#8226; JoSAA &amp; CSAB Choice Command Center</text>
   
   <rect x="920" y="40" width="230" height="35" rx="10" fill="rgba(245,158,11,0.15)" stroke="rgba(245,158,11,0.4)"/>
   <circle cx="940" cy="57" r="5" fill="#10b981"/>
   <text x="955" y="62" fill="#fbbf24" font-family="Inter, sans-serif" font-size="12" font-weight="700">Live Cutoff Database 2026</text>
 
-  <!-- Left Column: Student Dossier & Multi-Round Tracker -->
+  <!-- Left Column: Student Dossier &amp; Multi-Round Tracker -->
   <g transform="translate(40, 115)">
     <rect width="420" height="520" rx="18" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)"/>
     <text x="24" y="40" fill="#f59e0b" font-family="Inter, sans-serif" font-size="12" font-weight="800" text-transform="uppercase" letter-spacing="1">Simulated Student Profile</text>
-    <text x="24" y="70" fill="#ffffff" font-family="Inter, sans-serif" font-size="20" font-weight="800">AIR 4,120 &bull; OBC-NCL (HS: UP)</text>
+    <text x="24" y="70" fill="#ffffff" font-family="Inter, sans-serif" font-size="20" font-weight="800">AIR 4,120 &#8226; OBC-NCL (HS: UP)</text>
     
     <rect x="24" y="90" width="372" height="75" rx="12" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.2)"/>
     <text x="40" y="116" fill="#9ca3af" font-family="Inter, sans-serif" font-size="12">Target Dream Tier</text>
@@ -65,7 +65,7 @@
     <text x="40" y="475" fill="#9ca3af" font-family="Inter, sans-serif" font-size="11">Achieved via category-optimized choice sequence order.</text>
   </g>
 
-  <!-- Right Column: Choice Distribution & Strategic Matrix Visualization -->
+  <!-- Right Column: Choice Distribution &amp; Strategic Matrix Visualization -->
   <g transform="translate(480, 115)">
     <rect width="680" height="520" rx="18" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)"/>
     
@@ -110,7 +110,7 @@
       <text x="540" y="65" fill="#f59e0b" font-family="Inter, sans-serif" font-size="11" font-weight="700">Ambition</text>
 
       <!-- Row 2 -->
-      <line x1="20" y1="80" x2="600" y2="80" stroke="rgba(255,255,255,0.04)"/>
+      <line x1="20" y1="80" x2="600" y2="80" stroke="rgba(255,255,255,0.04)\"/>
       <text x="20" y="105" fill="#fbbf24" font-family="Inter, sans-serif" font-size="12" font-weight="700">02</text>
       <text x="90" y="105" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">IIT Delhi</text>
       <text x="290" y="105" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">Mathematics &amp; Computing</text>
@@ -118,7 +118,7 @@
       <text x="540" y="105" fill="#f59e0b" font-family="Inter, sans-serif" font-size="11" font-weight="700">Ambition</text>
 
       <!-- Row 3 (Allotted) -->
-      <line x1="20" y1="120" x2="600" y2="120" stroke="rgba(255,255,255,0.04)"/>
+      <line x1="20" y1="120" x2="600" y2="120" stroke="rgba(255,255,255,0.04)\"/>
       <rect x="10" y="125" width="600" height="35" rx="8" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.3)"/>
       <text x="20" y="148" fill="#34d399" font-family="Inter, sans-serif" font-size="12" font-weight="800">03</text>
       <text x="90" y="148" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="800">IIT Roorkee</text>
@@ -127,7 +127,7 @@
       <text x="540" y="148" fill="#10b981" font-family="Inter, sans-serif" font-size="11" font-weight="800">ALLOTTED</text>
 
       <!-- Row 4 -->
-      <line x1="20" y1="168" x2="600" y2="168" stroke="rgba(255,255,255,0.04)"/>
+      <line x1="20" y1="168" x2="600" y2="168" stroke="rgba(255,255,255,0.04)\"/>
       <text x="20" y="188" fill="#fbbf24" font-family="Inter, sans-serif" font-size="12" font-weight="700">04</text>
       <text x="90" y="188" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="600">IIT Kharagpur</text>
       <text x="290" y="188" fill="#d1d5db" font-family="Inter, sans-serif" font-size="12">Artificial Intelligence</text>
